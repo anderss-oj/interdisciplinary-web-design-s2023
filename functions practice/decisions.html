@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        let allStudents = [
+            'A',
+            'B-',
+            1,
+            4,
+            5,
+            2
+        ]
+
+        let studentsWhoPass = [];
+        let i = 0
+        //for loop to search through array
+        for (; i <= allStudents.length; i++) {
+        //if statement to grab passing grades from numbers
+        if (allStudents[i] >= 3) {
+            console.log (allStudents[i]);
+            //'push' method to add the exact term from old array to the new array.
+            studentsWhoPass.push (allStudents[i]);
+            console.log (studentsWhoPass + ". These students passed.");
+            }
+        //else if for letter grades with the possibly conditions.
+        else if (allStudents[i] == 'A' || allStudents[i] == 'A+' || allStudents[i] == 'A-' || allStudents[i] == 'B+' || allStudents[i] == 'B' || allStudents[i] == 'B-' || allStudents[i] == 'C+') {
+            console.log (allStudents[i]);
+            studentsWhoPass.push (allStudents[i]);
+            console.log (studentsWhoPass + ". These students passed.");
+            }
+}
+    </script>
+</html> 
