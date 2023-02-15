@@ -7,7 +7,7 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-#left-container {
+/*#left-container {
     background-color: #eee;
     width: 15%;
     left: 0px;
@@ -25,21 +25,28 @@ body {
     position: absolute;
     height: 100%;
     padding: 10px;
-}
+}*/
 
 .plant-holder {
     position: relative;
-    height: 13%;
-    left: -10px;
+    width: 80%;
+    height: 20%;
 }
 
-.plant {
+.plant2 {
+    position: absolute;
+    max-width: 150%;
+    max-height: 150%;
+    z-index: 2;
+}
+
+/*.plant {
     position: absolute;
     max-width: 150%;
     max-height: 150%;
     z-index: 2;
 
-}
+}*/
 
 .jar-walls {
     height: 80%;
@@ -104,4 +111,13 @@ body {
     bottom: 50%;
     left: 3%;
     border-radius: 1rem;
+}
+
+.container-grid {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 15%;
+    height: 90%;
+    background: #38c460;
 }
