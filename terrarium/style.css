@@ -1,5 +1,5 @@
 h1 {
-    color: blue;
+    color: rgb(135, 62, 177);
     text-align: center;
 }
 
@@ -40,13 +40,13 @@ body {
     z-index: 2;
 }
 
-/*.plant {
+.plant {
     position: absolute;
     max-width: 150%;
     max-height: 150%;
     z-index: 2;
 
-}*/
+}
 
 .jar-walls {
     height: 80%;
@@ -116,8 +116,24 @@ body {
 .container-grid {
     display: flex;
     flex-direction: column;
-    position: absolute;
+    position: relative;
     width: 15%;
     height: 90%;
-    background: #38c460;
+    background: #554464;
+}
+
+#left-flex-container {
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    height: 100%;
+    padding: 10px;
+}
+
+#right-flex-container {
+    right: 0px;
+    top: 0px;
+    position: absolute;
+    height: 100%;
+    padding: 10px;
 }
