@@ -1,0 +1,28 @@
+body {
+    background-color: slategray;
+    margin-left: 20%;
+    margin-top: 5%;
+}
+
+.highlight {
+    background-color: rgb(40, 34, 150);
+}
+  
+.error {
+    background-color: lightcoral;
+    border: red;
+}
+
+.inputBox {
+    font-family: 'Franklin Gothic Medium', sans-serif;
+
+}
+
+.text {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: antiquewhite;
+}
+
+p {
+    font-family: 'Franklin Gothic Medium', sans-serif;
+}

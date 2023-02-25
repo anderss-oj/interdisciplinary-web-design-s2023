@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="text">Typing game!</h1>
+    <h3 class="text">Practice your typing skills with a quote from Sherlock Holmes. Click **start** to begin!</h3>
+    <h2 class="text" id="quote"></h2> <!-- This will display our quote -->
+    <h2 class="text" id="message"></h2> <!-- This will display any status messages -->
+    <div class="inputBox">
+        <input type="text" aria-label="current word" id="typed-value" /> <!-- The textbox for typing -->
+        <button type="button" id="start">Start</button> <!-- To start the game -->
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!--
+    ight so what im gonna do is a game that's going to make a 3-color color palette.
+
+    start with 3 <span>'s to make the different sections
+    3 conditions to determine color: 
+        -location of first letter in alphabet (26+26 bc capital)
+        -length of word
+        -location of last letter in alphabet
+    these 3 conditions will go to the corresponding rgb numbers
+    multiply the numbers by rng (1-5), but not over the bounds of the rgb limits?
+    
+    things to keep
+        -text box
+        -'spacebar' recognition
+        -css styling changes on spacebar
+        -idk is there an endswith thing?
+        -the start button to initiate
+        -the display after you're done, change it to the words you typed
+-->
