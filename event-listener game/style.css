@@ -4,15 +4,6 @@ body {
     margin-top: 5%;
 }
 
-.highlight {
-    background-color: rgb(40, 34, 150);
-}
-  
-.error {
-    background-color: lightcoral;
-    border: red;
-}
-
 .inputBox {
     font-family: 'Franklin Gothic Medium', sans-serif;
 
@@ -25,4 +16,13 @@ body {
 
 p {
     font-family: 'Franklin Gothic Medium', sans-serif;
+}
+
+.displayBox {
+    margin-top: 10%;
+    height: 100px;
+    width: 100px;
+    /*background-color: white;*/
+    background-color: white;
+    text-align: center;
 }

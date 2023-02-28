@@ -1,100 +1,64 @@
-//quote array
-const quotes = [
-    'When you have eliminated the impossible, whatever remains, however improbable, must be the truth.',
-    'There is nothing more deceptive than an obvious fact.',
-    'I ought to know by this time that when a fact appears to be opposed to a long train of deductions it invariably proves to be capable of bearing some other interpretation.',
-    'I never make exceptions. An exception disproves the rule.',
-    'What one man can invent another can discover.',
-    'Nothing clears up a case so much as stating it to another person.',
-    'Education never ends, Watson. It is a series of lessons, with the greatest for the last.',
-    "Soy un perdedor, I'm a loser baby, so why don't you kill me?",
-    'Hello morning, you look good, good to me. Kissing the sky, I can feel it move me.',
-    'Sunday morning, sunshining in your eyes, sleepy face, smiling into mine.'
-];
-
-//word array
-let words = [];
-//words typing array
-let wordsIndex = [];
-
-//starting time
-let startTime= Date.now();
-
 //page elements
-const quoteElement = document.getElementById('quote');
-const messageElement = document.getElementById('message');
-const typedValueElement = document.getElementById('typed-value');
+const displayBox = document.getElementById('displayBox1');
+const typedValueElement1 = document.getElementById('typed-value1');
+const typedValueElement2 = document.getElementById('typed-value2');
+const typedValueElement3 = document.getElementById('typed-value3');
 
-document.getElementById('start').addEventListener('click', () => {
-    // get a quote
-    const quoteIndex = Math.floor(Math.random() * quotes.length);
-    const quote = quotes[quoteIndex];
-    // Put the quote into an array of words
-    words = quote.split(' ');
-    
-    // reset the word index for tracking
-    wordIndex = 0;
+  // a list of letters and their keys
+const letterValues = {
+  'a' : 10,
+  'b' : 20,
+  'c' : 30,
+  'd' : 40,
+  'e' : 50,
+  'f' : 60,
+  'g' : 70,
+  'h' : 80,
+  'i' : 90,
+  'j' : 100,
+  'k' : 110,
+  'l' : 120,
+  'm' : 130,
+  'n' : 140,
+  'o' : 150,
+  'p' : 160,
+  'q' : 170,
+  'r' : 180,
+  's' : 190,
+  't' : 200,
+  'u' : 210,
+  'v' : 220,
+  'w' : 230,
+  'x' : 240,
+  'y' : 250,
+  'z' : 255,
+};
 
-    // UI updates
-    // Create an array of span elements so we can set a class
-    const spanWords = words.map(function(word) { return `<span>${word} </span>`});
-    
-    // Convert into string and set as innerHTML on quote display
-    quoteElement.innerHTML = spanWords.join('');
-    
-    // Highlight the first word
-    quoteElement.childNodes[0].className = 'highlight';
-    
-    // Clear any prior messages
-    messageElement.innerText = '';
+//variables for the different text box values
+let pairedLetter1, pairedLetter2, pairedLetter3;
 
-    // Setup the textbox
-    // Clear the textbox
-    typedValueElement.value = '';
-    
-    // set focus
-    typedValueElement.focus();
-    
-    // set the event handler
+//inserts the taken values of each text box and puts them into the rgb values
+function updateDisplayBoxColor() {
+  if (pairedLetter1 !== undefined && pairedLetter2 !== undefined && pairedLetter3 !== undefined) {
+    displayBox.style.backgroundColor = 'rgb(' + pairedLetter1 + ',' + pairedLetter2 + ',' + pairedLetter3 + ')';
+  }
+}
 
-    // Start the timer
-    startTime = new Date().getTime();
+//functions to get value from each text box, and update displayBox color
+typedValueElement1.addEventListener('input', () => {
+  const typedValue = typedValueElement1.value;
+  pairedLetter1 = letterValues[typedValue];
+  updateDisplayBoxColor();
 });
 
-typedValueElement.addEventListener('input', () => {
-    // Get the current word
-    const currentWord = words[wordIndex];
-    
-    // get the current value
-    const typedValue = typedValueElement.value;
-  
-    if (typedValue === currentWord && wordIndex === words.length - 1) {
-      // end of sentence
-      // Display success
-      const elapsedTime = new Date().getTime() - startTime;
-      const message = `CONGRATULATIONS! You finished in ${elapsedTime / 1000} seconds.`;
-      messageElement.innerText = message;
-    } else if (typedValue.endsWith(' ') && typedValue.trim() === currentWord) {
-      // end of word
-      // clear the typedValueElement for the new word
-      typedValueElement.value = '';
-    
-      // move to the next word
-      wordIndex++;
-    
-      // reset the class name for all elements in quote
-      for (const wordElement of quoteElement.childNodes) {
-        wordElement.className = '';
-      }
-    
-      // highlight the new word
-      quoteElement.childNodes[wordIndex].className = 'highlight';
-    } else if (currentWord.startsWith(typedValue)) {
-      // currently correct
-      // highlight the next word
-      typedValueElement.className = '';
-    } else {
-      // error state
-      typedValueElement.className = 'error';
-    }
-  });
+typedValueElement2.addEventListener('input', () => {
+  const typedValue = typedValueElement2.value;
+  pairedLetter2 = letterValues[typedValue];
+  updateDisplayBoxColor();
+});
+
+typedValueElement3.addEventListener('input', () => {
+  const typedValue = typedValueElement3.value;
+  pairedLetter3 = letterValues[typedValue];
+  updateDisplayBoxColor();
+});

@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,34 +7,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1 class="text">Typing game!</h1>
-    <h3 class="text">Practice your typing skills with a quote from Sherlock Holmes. Click **start** to begin!</h3>
-    <h2 class="text" id="quote"></h2> <!-- This will display our quote -->
-    <h2 class="text" id="message"></h2> <!-- This will display any status messages -->
+    <h1 class="text">Typing color game!</h1>
+    <h3 class="text">Type one lowercase letter in each box, and you will recieve a color at the bottom!</h3>
     <div class="inputBox">
-        <input type="text" aria-label="current word" id="typed-value" /> <!-- The textbox for typing -->
-        <button type="button" id="start">Start</button> <!-- To start the game -->
+        <input type="text" aria-label="current letter1" id="typed-value1" /> <!-- The textbox for typing -->
+        <input type="text" aria-label="current letter2" id="typed-value2" />
+        <input type="text" aria-label="current letter3" id="typed-value3" />
     </div>
+    <div class="displayBox" id="displayBox1"></div>
     <script src="script.js"></script>
 </body>
 </html>
-
-<!--
-    ight so what im gonna do is a game that's going to make a 3-color color palette.
-
-    start with 3 <span>'s to make the different sections
-    3 conditions to determine color: 
-        -location of first letter in alphabet (26+26 bc capital)
-        -length of word
-        -location of last letter in alphabet
-    these 3 conditions will go to the corresponding rgb numbers
-    multiply the numbers by rng (1-5), but not over the bounds of the rgb limits?
-    
-    things to keep
-        -text box
-        -'spacebar' recognition
-        -css styling changes on spacebar
-        -idk is there an endswith thing?
-        -the start button to initiate
-        -the display after you're done, change it to the words you typed
--->
