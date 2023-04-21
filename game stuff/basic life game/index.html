@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Left or Right?!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="mainDisplay">
+        <div id="buttonDiv">
+            <button class="buttons" id="left">left</button>
+            <button class="buttons" id="middle">middle</button>
+            <button class="buttons" id="right">right</button>
+        </div>
+        <div class="instructions">
+            <div id="level1Inst">
+                <h2>Click a button, score a point, maybe...</h2>
+                <h3>You have 3 tacos. If you don't click the correct button, a taco will be deleted. With a correct click, you get a dorito!</h3>
+                <h2 id="nextLevelText">If you get 3 doritos you will unlock the next level!</h2>
+            </div>
+            <div class="instructions" id="life">
+                <img class="tacoImg" id="life1" src="https://cdn-icons-png.flaticon.com/512/4062/4062916.png">
+                <img class="tacoImg" id="life2" src="https://cdn-icons-png.flaticon.com/512/4062/4062916.png">
+                <img class="tacoImg" id="life3" src="https://cdn-icons-png.flaticon.com/512/4062/4062916.png">
+            </div>
+            <div class="instructions" id="doritos">
+                <img class="doritoImg" id="ogDorito" src="https://freepngimg.com/save/112162-chips-doritos-hq-image-free/840x859">
+            </div>
+        </div>
+    </div>
+    <div id="resetDisplay">
+        <h1 id="dead">You are dead, no more tacos for you!</h1>
+        <button class="buttons" id="resetButton">Try Again? :(</button>
+    </div>
+    <div id="winDisplay">
+        <h1>YOU WON!</h1>
+        <button class="buttons" id="winRestart">Restart?</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

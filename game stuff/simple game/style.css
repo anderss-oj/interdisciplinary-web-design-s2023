@@ -1,0 +1,38 @@
+:root {
+    background: rgb(40, 114, 89);
+}
+
+.title {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(233, 184, 61);
+}
+
+#playArea {
+    max-height: 500px;
+    max-width: 600px;
+}
+
+.caption {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(233, 184, 61);
+}
+
+.object {
+    text-align: center;
+    position: absolute;
+    
+  }
+
+#beans {
+    max-width: 20%;
+    max-height: 20%;
+    position: absolute;
+    margin-left: 20%;
+}
+
+#cheese {
+    max-width: 20%;
+    max-height: 20%;
+    margin-left: 20%;
+    position: absolute;
+}

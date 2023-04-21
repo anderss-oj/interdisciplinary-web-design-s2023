@@ -1,0 +1,77 @@
+body {
+    margin-top: 3%;
+    background-color: aquamarine;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#buttonDiv {
+    text-align: center;
+    margin-bottom: 3%;
+}
+
+.buttons {
+    font-size: x-large;
+}
+
+#left {
+    background-color: cadetblue;
+    width: 6%;
+    padding: 7% 0;
+    color: white;
+}
+
+#middle {
+    background-color: darkkhaki;
+    width: 10%;
+    padding: 5% 0;
+    display: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#right {
+    background-color: coral;
+    font-style: italic;
+    width: 10%;
+    padding: 1% 0;
+}
+
+.instructions {
+    text-align: center;
+    block-size: 100%;
+}
+
+.tacoImg {
+    display: inline-block;
+    max-width: 10%;
+    max-height: 10%;
+    position: relative;
+}
+
+.doritoImg {
+    display: inline;
+    max-width: 10%;
+    max-height: 10%;
+    position: relative;
+}
+
+#ogDorito {
+    display: none;
+}
+
+#resetDisplay {
+    text-align: center;
+    display: none;
+}
+
+#resetButton {
+    background-color: darkred;
+    color: white;
+    font-style: italic;
+    width: 15%;
+    padding: 1% 0;
+}
+
+#winDisplay {
+    text-align: center;
+    display: none;
+}

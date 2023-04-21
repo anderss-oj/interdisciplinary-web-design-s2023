@@ -1,0 +1,65 @@
+:root {
+    background-color: burlywood;
+}
+
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    max-width: 15%;
+    margin-top: 3%;
+    margin-left: auto; 
+    margin-right: auto; 
+    background-color: cadetblue;
+    padding: 2%;
+    border-radius: 8%;
+}
+
+#registerForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    max-width: 20%;
+    margin-left: auto; 
+    margin-right: auto; 
+    background-color: cadetblue;
+    padding: 2%;
+    border-radius: 10%; 
+  }
+
+h1, h2 {
+    background-color:beige ;
+    padding: 2%;
+    border-radius: 50%;
+    max-width: 20%;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+#dashboardTable {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    max-width: 80%;
+    margin-top: 3%;
+    margin-left: auto; 
+    margin-right: auto; 
+    background-color: cadetblue;
+    padding: 2%;
+}
+
+.tableRow {
+    display: flex;
+    flex-direction: row;
+    gap: 30%;
+    margin-left: 4%;
+}
+
+.error {
+    color: rgb(124, 0, 0);
+}

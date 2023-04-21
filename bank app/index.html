@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div id="app">Loading...</div>
+    <template id="login">
+        <h1>Bank App</h1>
+        <section>
+          <!-- <a href="/dashboard" onclick="onLinkClick(event)">Click Here to Navigate to Dashboard!</a> -->
+          <form id="loginForm" action="javascript:login()">
+              <label for="username">Username</label>
+              <input id="username" name="user" type="text">
+              <div id="loginError" class="error" role="alert"></div>
+              <button>Login</button>
+            </form>
+            <hr />
+          <div id="registerSection">
+            <h2>Register New Account</h2>
+            <form id="registerForm" action="javascript:register()">
+              <label for="user">Username (required)</label>
+              <input id="user" name="user" type="text" maxlength="20" required>
+              <label for="currency">Currency (required)</label>
+              <input id="currency" name="currency" type="text" value="$" maxlength="5" required>
+              <label for="description">Description</label>
+              <input id="description" name="description" type="text" maxlength="100">
+              <label for="balance">Current balance</label>
+              <input id="balance" name="balance" type="number" value="0">
+              <div id="registerError" class="error" role="alert"></div>
+              <button>Register</button>
+            </form>
+          </div>
+        </section>
+    </template>
+    <template id="dashboard">
+        <header>
+          <h1>Bank App</h1>
+          <a href="/login" onclick="onLinkClick(event)">Logout</a>
+        </header>
+        <section>
+          Balance: <span id="currency"></span><span id="balance"></span>
+        </section>
+        <h2 id="description"></h2>
+        <button id="addTransaction">Add Transaction?</button>
+        <section>
+          <h2>Transactions</h2>
+          <table id="dashboardTable">
+            <thead>
+              <tr class="tableRow">
+                <th>Date</th>
+                <th>Object</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody id="transactions"></tbody>
+          </table>
+        </section>
+      </template>
+      <template id="transaction">
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </template>
+      <template id="addTransForm">
+        <form id="transForm">
+          <label for="date">MM/DD/YYYY</label>
+          <input id="date" name="date" type="text" maxlength="10" required>
+          <label for="transDesc">Object</label>
+          <input id="transDesc" name="transDesc" type="text" maxlength="45" required>
+          <label for="amount">Amount (USE NEGATIVE VALUE FOR DEBIT)</label>
+          <input id="amount" name="amount" type="number" value="0">
+        </form>
+      </template>
+  </body>
+</html>
